@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25011ED02EA6F19BDD441806 /* Pods_LSDPush_upsPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1814AE9E874D0926C77CCD2 /* Pods_LSDPush_upsPlan.framework */; };
+		453E69E01E29B92100389F83 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E69DF1E29B92100389F83 /* TabBarController.swift */; };
+		453E69E21E29C56200389F83 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E69E11E29C56200389F83 /* Extensions.swift */; };
+		454761D01E2712CA006CDC0C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454761CF1E2712CA006CDC0C /* RealmSwift.framework */; };
+		454761D21E27132D006CDC0C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454761D11E27132D006CDC0C /* DataModel.swift */; };
+		454761D51E2713E6006CDC0C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454761D31E271395006CDC0C /* Realm.framework */; };
+		454761D61E2713E6006CDC0C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 454761D31E271395006CDC0C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		454761D81E2713E6006CDC0C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 454761CF1E2712CA006CDC0C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		454FEF8A1E2869AD0033A50A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454FEF891E2869AD0033A50A /* CalendarViewController.swift */; };
+		454FF0011E28B3B40033A50A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454FF0001E28B3B40033A50A /* CellView.swift */; };
+		454FF0031E28BFAA0033A50A /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 454FF0021E28BFAA0033A50A /* CellView.xib */; };
 		4578CC781E2467BB00566118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578CC771E2467BB00566118 /* AppDelegate.swift */; };
 		4578CC7A1E2467BB00566118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578CC791E2467BB00566118 /* ViewController.swift */; };
 		4578CC7D1E2467BB00566118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4578CC7B1E2467BB00566118 /* Main.storyboard */; };
@@ -33,7 +44,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		454761D91E2713E6006CDC0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				454761D81E2713E6006CDC0C /* RealmSwift.framework in Embed Frameworks */,
+				454761D61E2713E6006CDC0C /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		453E69DF1E29B92100389F83 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		453E69E11E29C56200389F83 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		454761CF1E2712CA006CDC0C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		454761D11E27132D006CDC0C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		454761D31E271395006CDC0C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		454FEF891E2869AD0033A50A /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		454FF0001E28B3B40033A50A /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		454FF0021E28BFAA0033A50A /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		4578CC741E2467BB00566118 /* LSDPush-upsPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LSDPush-upsPlan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4578CC771E2467BB00566118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4578CC791E2467BB00566118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +81,9 @@
 		4578CC931E2467BB00566118 /* LSDPush-upsPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LSDPush-upsPlanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4578CC971E2467BB00566118 /* LSDPush_upsPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSDPush_upsPlanUITests.swift; sourceTree = "<group>"; };
 		4578CC991E2467BB00566118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BD8CA05E57FCEFFDD04E3EA /* Pods-LSDPush-upsPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDPush-upsPlan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSDPush-upsPlan/Pods-LSDPush-upsPlan.debug.xcconfig"; sourceTree = "<group>"; };
+		B5236976D351D14776197F85 /* Pods-LSDPush-upsPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDPush-upsPlan.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSDPush-upsPlan/Pods-LSDPush-upsPlan.release.xcconfig"; sourceTree = "<group>"; };
+		D1814AE9E874D0926C77CCD2 /* Pods_LSDPush_upsPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSDPush_upsPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454761D51E2713E6006CDC0C /* Realm.framework in Frameworks */,
+				454761D01E2712CA006CDC0C /* RealmSwift.framework in Frameworks */,
+				25011ED02EA6F19BDD441806 /* Pods_LSDPush_upsPlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +117,14 @@
 		4578CC6B1E2467BB00566118 = {
 			isa = PBXGroup;
 			children = (
+				454761D31E271395006CDC0C /* Realm.framework */,
+				454761CF1E2712CA006CDC0C /* RealmSwift.framework */,
 				4578CC761E2467BB00566118 /* LSDPush-upsPlan */,
 				4578CC8B1E2467BB00566118 /* LSDPush-upsPlanTests */,
 				4578CC961E2467BB00566118 /* LSDPush-upsPlanUITests */,
 				4578CC751E2467BB00566118 /* Products */,
+				E17210D2E7B5B59F194E25AD /* Pods */,
+				F73BEF2C4A0157F7EA673DD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +142,17 @@
 			isa = PBXGroup;
 			children = (
 				4578CC771E2467BB00566118 /* AppDelegate.swift */,
+				453E69DF1E29B92100389F83 /* TabBarController.swift */,
 				4578CC791E2467BB00566118 /* ViewController.swift */,
+				454FEF891E2869AD0033A50A /* CalendarViewController.swift */,
+				454FF0001E28B3B40033A50A /* CellView.swift */,
+				454FF0021E28BFAA0033A50A /* CellView.xib */,
 				4578CC7B1E2467BB00566118 /* Main.storyboard */,
 				4578CC7E1E2467BB00566118 /* Assets.xcassets */,
 				4578CC801E2467BB00566118 /* LaunchScreen.storyboard */,
 				4578CC831E2467BB00566118 /* Info.plist */,
+				454761D11E27132D006CDC0C /* DataModel.swift */,
+				453E69E11E29C56200389F83 /* Extensions.swift */,
 			);
 			path = "LSDPush-upsPlan";
 			sourceTree = "<group>";
@@ -125,16 +175,49 @@
 			path = "LSDPush-upsPlanUITests";
 			sourceTree = "<group>";
 		};
+		E17210D2E7B5B59F194E25AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BD8CA05E57FCEFFDD04E3EA /* Pods-LSDPush-upsPlan.debug.xcconfig */,
+				B5236976D351D14776197F85 /* Pods-LSDPush-upsPlan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F73BEF2C4A0157F7EA673DD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1814AE9E874D0926C77CCD2 /* Pods_LSDPush_upsPlan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		454FEFAF1E28771B0033A50A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		4578CC731E2467BB00566118 /* LSDPush-upsPlan */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4578CC9C1E2467BB00566118 /* Build configuration list for PBXNativeTarget "LSDPush-upsPlan" */;
 			buildPhases = (
+				E1E9518647084F4D124D44B1 /* [CP] Check Pods Manifest.lock */,
 				4578CC701E2467BB00566118 /* Sources */,
 				4578CC711E2467BB00566118 /* Frameworks */,
 				4578CC721E2467BB00566118 /* Resources */,
+				454761D91E2713E6006CDC0C /* Embed Frameworks */,
+				454761DA1E271486006CDC0C /* Run Script */,
+				454FEFAF1E28771B0033A50A /* Headers */,
+				C6CB8986A18C9C0938E3E45F /* [CP] Embed Pods Frameworks */,
+				C32D96F8017382BECECFBD49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,11 +271,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = LSD;
 				TargetAttributes = {
 					4578CC731E2467BB00566118 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Q432NC6FD7;
 						ProvisioningStyle = Automatic;
 					};
 					4578CC871E2467BB00566118 = {
@@ -232,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454FF0031E28BFAA0033A50A /* CellView.xib in Resources */,
 				4578CC821E2467BB00566118 /* LaunchScreen.storyboard in Resources */,
 				4578CC7F1E2467BB00566118 /* Assets.xcassets in Resources */,
 				4578CC7D1E2467BB00566118 /* Main.storyboard in Resources */,
@@ -254,13 +339,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		454761DA1E271486006CDC0C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+		C32D96F8017382BECECFBD49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSDPush-upsPlan/Pods-LSDPush-upsPlan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6CB8986A18C9C0938E3E45F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSDPush-upsPlan/Pods-LSDPush-upsPlan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1E9518647084F4D124D44B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4578CC701E2467BB00566118 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454FEF8A1E2869AD0033A50A /* CalendarViewController.swift in Sources */,
+				454FF0011E28B3B40033A50A /* CellView.swift in Sources */,
 				4578CC7A1E2467BB00566118 /* ViewController.swift in Sources */,
+				453E69E01E29B92100389F83 /* TabBarController.swift in Sources */,
 				4578CC781E2467BB00566118 /* AppDelegate.swift in Sources */,
+				454761D21E27132D006CDC0C /* DataModel.swift in Sources */,
+				453E69E21E29C56200389F83 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +485,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -383,6 +536,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -410,8 +564,15 @@
 		};
 		4578CC9D1E2467BB00566118 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BD8CA05E57FCEFFDD04E3EA /* Pods-LSDPush-upsPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q432NC6FD7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/JTAppleCalendar\"",
+				);
 				INFOPLIST_FILE = "LSDPush-upsPlan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LSD.LSDPush-upsPlan";
@@ -422,8 +583,15 @@
 		};
 		4578CC9E1E2467BB00566118 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5236976D351D14776197F85 /* Pods-LSDPush-upsPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q432NC6FD7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/JTAppleCalendar\"",
+				);
 				INFOPLIST_FILE = "LSDPush-upsPlan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LSD.LSDPush-upsPlan";
@@ -505,6 +673,7 @@
 				4578CC9E1E2467BB00566118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4578CC9F1E2467BB00566118 /* Build configuration list for PBXNativeTarget "LSDPush-upsPlanTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +682,7 @@
 				4578CCA11E2467BB00566118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4578CCA21E2467BB00566118 /* Build configuration list for PBXNativeTarget "LSDPush-upsPlanUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +691,7 @@
 				4578CCA41E2467BB00566118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
