@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import RealmSwift
 import JTAppleCalendar
-//import CellView
 
 class CalendarViewController: UIViewController {
 
-    
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var daysLabel: UILabel!
+    @IBOutlet weak var pushUpsLabel: UILabel!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+
+    let result = try! Realm().objects(PushUpModel.self)
+    var notificationToken: NotificationToken? = nil
     
     var firstLaunched = true
     
@@ -23,7 +27,7 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setDateLabel(date: Date())
+        customInit()
         calendarInit()
     }
     
@@ -32,9 +36,29 @@ class CalendarViewController: UIViewController {
             reloadData()
         }
     }
-
-    func setDateLabel(date: Date) {
+    
+    deinit {
+        notificationToken?.stop()
+    }
+    
+    
+    func customInit() {
+        notificationToken = result.addNotificationBlock({ [weak self] (changes: RealmCollectionChange) in
+            self?.updateUI(date: Date())
+        })
+    }
+    
+    func updateUI(date: Date) {
         dateLabel.text = DateFormatter().string(format: "yyyy年MMM", from: date)
+        let monthModel = result.filter("date BEGINSWITH %@", DateFormatter().string(format: "yyyy-MM", from: date))
+        if monthModel.count > 0 {
+            daysLabel.text = String(monthModel.count)
+            let count: Int = monthModel.sum(ofProperty: "pushUpCount")
+            pushUpsLabel.text = String(count)
+        } else {
+            daysLabel.text = "0"
+            pushUpsLabel.text = "0"
+        }
     }
     
     func calendarInit() {
@@ -46,16 +70,9 @@ class CalendarViewController: UIViewController {
     
     func reloadData() {
         firstLaunched = false
-        calendarView.scrollToDate(Date())
+        calendarView.reloadData(withAnchor: Date(), animation: true)
+        updateUI(date: Date())
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     override func didReceiveMemoryWarning() {
@@ -69,7 +86,9 @@ extension CalendarViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let startDate = DateFormatter().date(format: nil, from: "2017-01-13")
-        let endDate = DateFormatter().date(format: nil, from: "2018-12-31")
+        var dateComponents = DateComponents()
+        dateComponents.month = 1
+        let endDate = Calendar.current.date(byAdding: dateComponents, to: Date())!
         
         let parameters = ConfigurationParameters.init(startDate: startDate,
                                                  endDate: endDate,
@@ -82,8 +101,15 @@ extension CalendarViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
     }
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
+        let dateString = DateFormatter().string(format: nil, from: date)
         
-        (cell as? CellView)?.handleCellSelection(cellState: cellState, date: date, selectedDate: nil)
+        
+        if let count = result.filter("date == %@", dateString).first?.pushUpCount {
+            (cell as? CellView)?.handleCell(cellState: cellState, date: date, marking: count > 0)
+            return
+        }
+        
+        (cell as? CellView)?.handleCell(cellState: cellState, date: date, marking: false)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
@@ -95,13 +121,13 @@ extension CalendarViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
 //        (cell as? CellView)?.cellSelectionChanged(cellState, date: date)
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, willResetCell cell: JTAppleDayCellView) {
-//        (cell as? CellView)?.selectedView.isHidden = true
-    }
+//    func calendar(_ calendar: JTAppleCalendarView, willResetCell cell: JTAppleDayCellView) {
+//        (cell as? CellView)?.resetCell()
+//    }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         let startDate = visibleDates.monthDates.first
-        setDateLabel(date: startDate!)
+        updateUI(date: startDate!)
     }
 }
 

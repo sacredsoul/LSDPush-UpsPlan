@@ -11,29 +11,36 @@ import JTAppleCalendar
 
 class CellView: JTAppleDayCellView {
 
-    
     @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var markView: UIImageView!
     
     
-    func handleCellSelection(cellState: CellState, date: Date, selectedDate: Date?) {
+    func handleCell(cellState: CellState, date: Date, marking: Bool) {
         
         //InDate, OutDate
         if cellState.dateBelongsTo != .thisMonth {
-            self.dayLabel.text = ""
             self.isUserInteractionEnabled = false
+            self.dayLabel.text = ""
+            markView.image = nil
         } else {
             self.isUserInteractionEnabled = true
             dayLabel.text = cellState.text
-//            dayLabel.textColor = selectableDateColor
-        }
-        
-        dayLabel.textColor = UIColor.black
-        
-        if Calendar.current.isDate(date, inSameDayAs: Date()) {
-            if !cellState.isSelected {
-                self.dayLabel.textColor = UIColor.white
+            if marking {
+                markView.image = UIImage.init(named: "Mark")
+            } else {
+                markView.image = nil
             }
         }
+        
+        dayLabel.textColor = UIColor.init(red: 213.0/255.0, green: 217.0/255.0, blue: 186.0/255.0, alpha: 1.0)
+        
+        if Calendar.current.isDate(date, inSameDayAs: Date()) {
+            self.dayLabel.textColor = UIColor.init(red: 222.0/255.0, green: 54.0/255.0, blue: 105.0/255.0, alpha: 1.0)
+        }
     }
+    
+//    func resetCell() {
+//        markView.image = nil
+//    }
 
 }

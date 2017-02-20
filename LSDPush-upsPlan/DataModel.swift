@@ -6,7 +6,7 @@
 //  Copyright © 2017年 LSD. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RealmSwift
 
 class PushUpModel: Object {

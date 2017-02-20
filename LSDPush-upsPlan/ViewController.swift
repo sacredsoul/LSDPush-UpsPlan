@@ -11,6 +11,7 @@ import RealmSwift
 
 class ViewController: UIViewController, CAAnimationDelegate {
 
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var daysLabel: UILabel!
     @IBOutlet weak var pushUpsLabel: UILabel!
@@ -35,6 +36,10 @@ class ViewController: UIViewController, CAAnimationDelegate {
         customDate()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func reloadData() {
         if result.count == 0 {
             return
@@ -45,17 +50,19 @@ class ViewController: UIViewController, CAAnimationDelegate {
     }
     
     private func customInit() {
+        backgroundView.layer.cornerRadius = 10.0
+        
         originalWidth = confirmView.bounds.width
         
         confirmView.layer.cornerRadius = confirmView.frame.size.height/2.0
-        confirmView.layer.borderColor = UIColor.white.cgColor
+        confirmView.layer.borderColor = dateLabel.textColor.cgColor
         confirmView.layer.borderWidth = 1.0
         confirmView.layer.masksToBounds = true
         
         
         progressLayer.frame = CGRect.init(x: 0, y: 0, width: 0, height: confirmView.bounds.size.height)
         progressLayer.anchorPoint = CGPoint.init(x: 0, y: 0.5)
-        progressLayer.backgroundColor = self.view.backgroundColor?.cgColor
+        progressLayer.backgroundColor = UIColor.init(red: 222.0/255.0, green: 54.0/255.0, blue: 105.0/255.0, alpha: 1.0).cgColor
         confirmView.layer.addSublayer(progressLayer)
         
     }

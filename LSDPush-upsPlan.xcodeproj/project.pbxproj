@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25011ED02EA6F19BDD441806 /* Pods_LSDPush_upsPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1814AE9E874D0926C77CCD2 /* Pods_LSDPush_upsPlan.framework */; };
+		452C5F351E2CAB0000390B03 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C5F341E2CAB0000390B03 /* CameraViewController.swift */; };
 		453E69E01E29B92100389F83 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E69DF1E29B92100389F83 /* TabBarController.swift */; };
 		453E69E21E29C56200389F83 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E69E11E29C56200389F83 /* Extensions.swift */; };
 		454761D01E2712CA006CDC0C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454761CF1E2712CA006CDC0C /* RealmSwift.framework */; };
@@ -60,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		452C5F341E2CAB0000390B03 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		453E69DF1E29B92100389F83 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		453E69E11E29C56200389F83 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		454761CF1E2712CA006CDC0C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				454FEF891E2869AD0033A50A /* CalendarViewController.swift */,
 				454FF0001E28B3B40033A50A /* CellView.swift */,
 				454FF0021E28BFAA0033A50A /* CellView.xib */,
+				452C5F341E2CAB0000390B03 /* CameraViewController.swift */,
 				4578CC7B1E2467BB00566118 /* Main.storyboard */,
 				4578CC7E1E2467BB00566118 /* Assets.xcassets */,
 				4578CC801E2467BB00566118 /* LaunchScreen.storyboard */,
@@ -194,16 +197,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		454FEFAF1E28771B0033A50A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		4578CC731E2467BB00566118 /* LSDPush-upsPlan */ = {
 			isa = PBXNativeTarget;
@@ -215,7 +208,6 @@
 				4578CC721E2467BB00566118 /* Resources */,
 				454761D91E2713E6006CDC0C /* Embed Frameworks */,
 				454761DA1E271486006CDC0C /* Run Script */,
-				454FEFAF1E28771B0033A50A /* Headers */,
 				C6CB8986A18C9C0938E3E45F /* [CP] Embed Pods Frameworks */,
 				C32D96F8017382BECECFBD49 /* [CP] Copy Pods Resources */,
 			);
@@ -411,6 +403,7 @@
 				4578CC7A1E2467BB00566118 /* ViewController.swift in Sources */,
 				453E69E01E29B92100389F83 /* TabBarController.swift in Sources */,
 				4578CC781E2467BB00566118 /* AppDelegate.swift in Sources */,
+				452C5F351E2CAB0000390B03 /* CameraViewController.swift in Sources */,
 				454761D21E27132D006CDC0C /* DataModel.swift in Sources */,
 				453E69E21E29C56200389F83 /* Extensions.swift in Sources */,
 			);
