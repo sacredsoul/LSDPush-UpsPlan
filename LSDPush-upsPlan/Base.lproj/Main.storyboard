@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oW5-xN-aPv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oW5-xN-aPv">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -138,7 +138,6 @@
                                 <rect key="frame" x="40" y="50" width="334" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Mhj-il-DDE"/>
-                                    <constraint firstAttribute="width" constant="334" id="c7S-bB-nez"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.83529411760000005" green="0.85098039219999999" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,9 +152,9 @@
                             <constraint firstItem="ybT-mG-1xU" firstAttribute="top" secondItem="lqW-EF-6d6" secondAttribute="bottom" constant="30" id="876-2w-Xxm"/>
                             <constraint firstItem="gJS-LJ-hOQ" firstAttribute="trailing" secondItem="huN-hk-DtF" secondAttribute="trailingMargin" id="8qd-Le-iH7"/>
                             <constraint firstItem="WZX-1D-TaV" firstAttribute="centerY" secondItem="IVy-iP-Qbv" secondAttribute="centerY" id="AfY-yH-Avs"/>
-                            <constraint firstItem="ybT-mG-1xU" firstAttribute="centerX" secondItem="huN-hk-DtF" secondAttribute="centerX" id="Clh-Fn-udm"/>
                             <constraint firstItem="vlz-ha-a9I" firstAttribute="top" secondItem="40O-Eo-eWp" secondAttribute="bottom" id="EiU-Bq-Vwh"/>
                             <constraint firstItem="vlz-ha-a9I" firstAttribute="bottom" secondItem="dCU-Sr-Xh2" secondAttribute="bottom" id="HRh-H1-Ze6"/>
+                            <constraint firstItem="ybT-mG-1xU" firstAttribute="leading" secondItem="huN-hk-DtF" secondAttribute="leadingMargin" constant="20" id="Hzt-NE-ULK"/>
                             <constraint firstItem="dCU-Sr-Xh2" firstAttribute="trailing" secondItem="huN-hk-DtF" secondAttribute="trailingMargin" id="IVs-rS-BIq"/>
                             <constraint firstItem="sSl-OV-dE0" firstAttribute="trailing" secondItem="huN-hk-DtF" secondAttribute="trailingMargin" id="JDr-we-ouP"/>
                             <constraint firstItem="vlz-ha-a9I" firstAttribute="centerX" secondItem="ybT-mG-1xU" secondAttribute="centerX" id="M6I-cd-jNO"/>
@@ -166,6 +165,7 @@
                             <constraint firstItem="QNE-AX-LVs" firstAttribute="leading" secondItem="huN-hk-DtF" secondAttribute="leadingMargin" id="Upa-IW-Lt4"/>
                             <constraint firstItem="FOf-CL-g1u" firstAttribute="centerY" secondItem="zzE-yK-JCR" secondAttribute="centerY" id="Xli-g7-nwy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WZX-1D-TaV" secondAttribute="trailing" constant="30" id="dDC-3c-Tds"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ybT-mG-1xU" secondAttribute="trailing" constant="20" id="fM2-R0-eHI"/>
                             <constraint firstItem="dCU-Sr-Xh2" firstAttribute="leading" secondItem="huN-hk-DtF" secondAttribute="leadingMargin" id="jpc-RI-Oy3"/>
                             <constraint firstItem="ASO-7z-cjt" firstAttribute="top" secondItem="zzE-yK-JCR" secondAttribute="bottom" constant="40" id="mcs-k2-LGf"/>
                             <constraint firstItem="vlz-ha-a9I" firstAttribute="width" secondItem="40O-Eo-eWp" secondAttribute="width" id="n5D-c6-tsz"/>

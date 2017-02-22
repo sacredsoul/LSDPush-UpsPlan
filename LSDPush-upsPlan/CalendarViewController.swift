@@ -18,7 +18,6 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
 
     let result = try! Realm().objects(PushUpModel.self)
-    var notificationToken: NotificationToken? = nil
     
     var firstLaunched = true
     
@@ -26,8 +25,7 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        customInit()
+        
         calendarInit()
     }
     
@@ -37,15 +35,24 @@ class CalendarViewController: UIViewController {
         }
     }
     
-    deinit {
-        notificationToken?.stop()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     
-    func customInit() {
-        notificationToken = result.addNotificationBlock({ [weak self] (changes: RealmCollectionChange) in
-            self?.updateUI(date: Date())
-        })
+    
+    func calendarInit() {
+        calendarView.delegate = self
+        calendarView.dataSource = self
+        calendarView.registerCellViewXib(file: "CellView")
+        calendarView.cellInset = CGPoint(x: 0, y: 0)
+    }
+    
+    func reloadData() {
+        firstLaunched = false
+        calendarView.reloadData(withAnchor: Date(), animation: true)
+        updateUI(date: Date())
     }
     
     func updateUI(date: Date) {
@@ -61,24 +68,7 @@ class CalendarViewController: UIViewController {
         }
     }
     
-    func calendarInit() {
-        calendarView.delegate = self
-        calendarView.dataSource = self
-        calendarView.registerCellViewXib(file: "CellView")
-        calendarView.cellInset = CGPoint(x: 0, y: 0)
-    }
     
-    func reloadData() {
-        firstLaunched = false
-        calendarView.reloadData(withAnchor: Date(), animation: true)
-        updateUI(date: Date())
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 

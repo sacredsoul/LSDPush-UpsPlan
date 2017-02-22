@@ -19,11 +19,9 @@ class CellView: JTAppleDayCellView {
         
         //InDate, OutDate
         if cellState.dateBelongsTo != .thisMonth {
-            self.isUserInteractionEnabled = false
             self.dayLabel.text = ""
             markView.image = nil
         } else {
-            self.isUserInteractionEnabled = true
             dayLabel.text = cellState.text
             if marking {
                 markView.image = UIImage.init(named: "Mark")
@@ -32,6 +30,7 @@ class CellView: JTAppleDayCellView {
             }
         }
         
+        self.isUserInteractionEnabled = cellState.dateBelongsTo == .thisMonth
         dayLabel.textColor = UIColor.init(red: 213.0/255.0, green: 217.0/255.0, blue: 186.0/255.0, alpha: 1.0)
         
         if Calendar.current.isDate(date, inSameDayAs: Date()) {
