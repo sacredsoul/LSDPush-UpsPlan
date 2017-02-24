@@ -74,14 +74,14 @@ class ViewController: UIViewController, CAAnimationDelegate {
     }
     
     private func addGesture() {
-        let horizontalGesture = UIPanGestureRecognizer.init(target: self, action: #selector(handleHorizontalPan(_:)))
-        self.view.addGestureRecognizer(horizontalGesture)
-        
         let verticalGesture = UIPanGestureRecognizer.init(target: self, action: #selector(handleVerticalPan(_:)))
-        confirmView.addGestureRecognizer(verticalGesture)
+        self.view.addGestureRecognizer(verticalGesture)
+        
+        let horizontalGesture = UIPanGestureRecognizer.init(target: self, action: #selector(handleHorizontalPan(_:)))
+        confirmView.addGestureRecognizer(horizontalGesture)
     }
     
-    @objc func handleHorizontalPan(_ gestureRecognizer: UIGestureRecognizer) {
+    @objc func handleVerticalPan(_ gestureRecognizer: UIGestureRecognizer) {
         if gestureRecognizer.state == .began {
             lastPoint = gestureRecognizer.location(in: self.view)
         }
@@ -103,7 +103,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
         }
     }
     
-    @objc func handleVerticalPan(_ gestureRecognizer: UIGestureRecognizer) {
+    @objc func handleHorizontalPan(_ gestureRecognizer: UIGestureRecognizer) {
         if gestureRecognizer.state == .changed {
             let point = gestureRecognizer.location(in: self.view)
             
